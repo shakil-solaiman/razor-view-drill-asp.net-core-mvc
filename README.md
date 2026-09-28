@@ -31,6 +31,9 @@ Razor View Drill demonstrates how data moves from a C# Controller to a Razor Vie
 6. **Layout:** Using a shared Layout to keep common parts like the navbar and footer in one place.
 7. **Tag Helpers:** Using asp-controller and asp-action to create links between different pages.
 
+
+<img width="1917" height="1078" alt="Screenshot 2026-09-28 111216" src="https://github.com/user-attachments/assets/a38b04ee-8e41-4252-a4b1-a603b423129b" />
+
 ---
 
 ## What the Page Shows
