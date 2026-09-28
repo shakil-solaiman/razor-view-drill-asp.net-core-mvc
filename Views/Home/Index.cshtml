@@ -1,0 +1,78 @@
+﻿@model List<string>
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+
+    <h1 class="display-4">Razor View Drill</h1>
+
+
+    @* Razor Syntax 02: @foreach loop *@
+
+
+    <h4>Employee List</h4>
+
+    <table class="table table-bordered w-50 mx-auto">
+
+        <thead>
+            <tr>
+                <th>Serial No.</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @{ int i = 1; }
+            @foreach (var name in Model)
+            {
+                <tr>
+                    <td>@i</td>
+                    <td>@name</td>
+                </tr>
+                i++;
+            }
+        </tbody>
+
+    </table>
+
+
+
+    @* Razor Syntax 03: @if / else conditional *@
+
+
+    @if (Model.Count > 0)
+    {
+        <p>You have @Model.Count Employee in the list.</p>
+    }
+    else
+    {
+        <p>No Employee added yet.</p>
+    }
+
+
+    @* Razor Syntax 04: @ inline expression *@
+
+
+    <p>
+        Today's date and time is:
+        <strong>@DateTime.Now</strong>
+    </p>
+
+
+    @* Razor Syntax 05: Tag Helper (asp-controller / asp-action) *@
+
+
+    <p class="fs-5">
+        <a asp-controller="Home" asp-action="Index">Refresh Employee List</a>
+    </p>
+
+    @* Razor Syntax 06: Partial View *@
+
+
+    <partial name="_EmployeeCount" model="Model" />
+
+</div>
+

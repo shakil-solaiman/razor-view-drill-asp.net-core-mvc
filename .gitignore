@@ -1,0 +1,28 @@
+# Build output
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# VS Code
+.vscode/
+
+# JetBrains Rider
+.idea/
+
+# Publish output
+publish/
+
+# Logs
+*.log
+
+# Secrets and local settings
+appsettings.Development.json
+secrets.json
+
+# OS files
+.DS_Store
+Thumbs.db
